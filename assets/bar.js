@@ -39,9 +39,12 @@ function sendTo(url, top, bottom){
         'services': 'services.html',
         'qr': 'qr.html',
         'more': 'more.html',
-        'card': 'card.html',  // Stare przekierowanie
+        'card': 'card.html',
+        'shortcuts': 'shortcuts.html',
+        'pesel': 'pesel.html',
+        'document': 'document.html',
         'scan': 'scan.html',
-        'show': 'show.html',  // Stare przekierowanie
+        'show': 'show.html',
         'login': 'login.html'
     };
     
