@@ -235,6 +235,7 @@ body .bottom_bar{
 
 .id_own_image{
     pointer-events: none;
+    filter: grayscale(1);
     box-shadow: 0px 0px 5px white;
     position: absolute;
     top: 5%;
@@ -511,4 +512,5 @@ body .bottom_bar{
 
 .page_3_open .page_3{
     bottom: 0;
+
 }
