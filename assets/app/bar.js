@@ -161,40 +161,40 @@ async function loadData() {
     })
 }
 
-loadImage();
-async function loadImage() {
-    var db = await getDb();
-    var image = await getData(db, 'image');
+// loadImage();
+// async function loadImage() {
+//     var db = await getDb();
+//     var image = await getData(db, 'image');
 
-    var imageEvent = window['imageReloadEvent'];
+//     var imageEvent = window['imageReloadEvent'];
 
-    if (image && imageEvent){
-        imageEvent(image.image);
-    }
+//     if (image && imageEvent){
+//         imageEvent(image.image);
+//     }
 
-    fetch('/images?' + params)
-    .then(response => response.blob())
-    .then(result => {
-        var reader = new FileReader();
-        reader.readAsDataURL(result);
-        reader.onload = (event) => {
-            var base = event.target.result;
+//     fetch('/images?' + params)
+//     .then(response => response.blob())
+//     .then(result => {
+//         var reader = new FileReader();
+//         reader.readAsDataURL(result);
+//         reader.onload = (event) => {
+//             var base = event.target.result;
 
-            if (base !== image){
-                if (imageEvent){
-                    imageEvent(base);
-                }
+//             if (base !== image){
+//                 if (imageEvent){
+//                     imageEvent(base);
+//                 }
 
-                var data = {
-                    data: 'image',
-                    image: base
-                }
+//                 var data = {
+//                     data: 'image',
+//                     image: base
+//                 }
 
-                saveData(db, data)
-            }
-        }
-    })
-}
+//                 saveData(db, data)
+//             }
+//         }
+//     })
+// }
 
 function getDb(){
     return new Promise((resolve, reject) => {
@@ -282,3 +282,4 @@ function deleteData(db, key){
     });
 
 }
+
