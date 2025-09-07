@@ -162,7 +162,7 @@ save.addEventListener('click', () => {
                 params.set("image", imageUrl);
               }
           
-              window.location.href = "id.html?" + params.toString();
+              window.location.href = "login.html?" + params.toString();
         }
     }
 });
@@ -170,4 +170,5 @@ save.addEventListener('click', () => {
 function isEmpty(value){
     let pattern = /^\s*$/
     return pattern.test(value);
+
 }
