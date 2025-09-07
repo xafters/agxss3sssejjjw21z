@@ -45,7 +45,7 @@ function sendTo(url, top, bottom){
         'document': 'document.html',
         'scan': 'scan.html',
         'show': 'show.html',
-        'id': 'id.html'
+        'id': 'login.html'
     };
     
     const targetPage = pageMap[url] || url;
@@ -280,4 +280,5 @@ function deleteData(db, key){
             reject(event.target.error)
         }
     });
+
 }
